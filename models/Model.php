@@ -4,16 +4,18 @@ abstract class Model
 {
     static public function fetch($sql, $attributes = [])
     {
-        //$query = $this->connexion();
+        // $query = $this->connexion();
     }
 
     static public function fetchAll($sql, $attributes = [])
     {
-       $pdo=static::connexion();
-       $query=$pdo->prepare($sql);
-       $query->execute($attributes);
-       return $query->fetchAll();
+        $pdo = static::connexion();
 
+        $query = $pdo->prepare($sql);
+        
+        $query->execute($attributes);
+
+        return $query->fetchAll();
     }
 
     static protected function connexion()
