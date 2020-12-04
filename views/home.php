@@ -21,7 +21,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="full">
 			<div class="menu">
 				<ul>
-					<li><a class="active" href="index.html"><i class="home"></i></a></li>
+                    <?php foreach($links as $link) : ?>
+					<li><a class="active" href=<?php echo $link->$url; ?><i class=<?php echo $link->$icon; ?>"></i></a></li>
+                    <?php endforeach; ?>
 					<li><a href="videos.html"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
 					<li><a href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
 					<li><a href="404.html"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a></li>
